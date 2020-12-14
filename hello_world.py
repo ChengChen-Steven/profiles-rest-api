@@ -98,6 +98,20 @@ print("Hello World!")
 ## Go to 127.0.0.1:8000/admin/
 
 
+## APIViews
+## Give you the most control over the logic
+## When to use APIViews
+#### 1. Need full control over the logic
+#### 2. Processing files and rendering a synchronous response
+#### 3. You are calling other APIs/servies
+#### 4. Accessing local files or data
+
+## ViewSets
+#### 1. A simple CRUD unterface to your database
+#### 2. A quick and simple API
+#### 3. Little to no customization on the logic
+#### 4. Working with the standard data structures
+
 
 
 
