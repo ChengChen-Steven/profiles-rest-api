@@ -32,7 +32,7 @@ print("Hello World!")
 ## create python virtual environment
 ## this won't sync with local machine
 # vagrant ssh
-# cd /vagrant/
+# cd /vagrant
 # python -m venv ~/env
 
 ## activate virtual environment
@@ -45,12 +45,57 @@ print("Hello World!")
 # deactivate
 
 
-## Create a django profiles_project
+## Create a django project: profiles_project
 # . means putting file in root
 # django-admin.py startproject profiles_project .
 
+## Create an app: profiles_api
+# python manage.py startapp profiles_api
+
+## Enable the app in django project
+## in ./profiles_project/settings.py, "INSTALLED_APPS"
+## add app to this app list
+
+## Start django dev server
+# python manage.py runserver 0.0.0.0:8000
+
+## Go to 127.0.0.1:8000, 127.0.0.1 is the local host address
+## will see a port is placeheld for django
+## Stop server
+# ctrl-c
 
 
+## Django Models
+## In Django, we use models to describe data we need for application
+## Django uses these models to set up and configrate our database to store our data effectively
+## Each model in Django maps to a specific table within our database
+## Django handles the relationship between our models and the database for us so we never need to write any sql statements or interact with the database directly
+
+## Model
+## Default user model -> for authentication
+## Can be overwritten
+## Best practice is to have all models in profile_apis/model.py
+
+## Change Model - Migrations
+## Everytime change or add additional model, need to change migrations file through commandline
+# vagrant ssh ; cd /vagrant ; source ~/env/bin/activate
+# python manage.py makemigrations profiles_api
+## Run migration - make all changes required 
+# python manage.py migrate
+
+## Superuser
+# vagrant ssh ; cd /vagrant ; source ~/env/bin/activate
+# python manage.py createsuperuser
+# email: cheng.chen.2017@marshall.usc.edu
+# name: Cheng Chen
+# pwd: 52Kb1314
+
+## Enable Django admin
+## profiles_api admin.py
+
+## Test Django admin 
+# python manage.py runserver 0.0.0.0:8000
+## Go to 127.0.0.1:8000/admin/
 
 
 
