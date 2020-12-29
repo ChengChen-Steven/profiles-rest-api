@@ -88,7 +88,7 @@ print("Hello World!")
 # python manage.py createsuperuser
 # email: cheng.chen.2017@marshall.usc.edu
 # name: Cheng Chen
-# pwd: 52Kb1314
+# pwd: a_password
 
 ## Enable Django admin
 ## profiles_api admin.py
